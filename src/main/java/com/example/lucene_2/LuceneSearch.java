@@ -59,7 +59,7 @@ public class LuceneSearch {
         SpellChecker spellChecker = new SpellChecker(indexSpellDir);
         String res = s;
 
-        if (! spellChecker.exist(s)){ // если в словаре нет слова из запроса, то не исправляем
+        if (! spellChecker.exist(s)){ // если в словаре нет слова из запроса, то исправляем
             int suggestionsNumber = 1;
             String[] suggestions = spellChecker.suggestSimilar(s, suggestionsNumber);
 
